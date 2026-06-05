@@ -1,0 +1,1181 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rutas y Sabores | Viajes con esencia</title>
+  <meta name="description" content="Escapadas, paisajes únicos y sabores auténticos en Uruguay. Rutas y Sabores transforma cada excursión en recuerdos inolvidables.">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #111111;
+      --charcoal: #1d2020;
+      --paper: #fbfaf7;
+      --cream: #f4eee4;
+      --wine: #9d1734;
+      --gold: #c9932d;
+      --olive: #556b3b;
+      --mist: rgba(255, 255, 255, .78);
+      --line: rgba(17, 17, 17, .12);
+      --shadow: 0 24px 70px rgba(17, 17, 17, .18);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .site-shell {
+      overflow: hidden;
+      background:
+        linear-gradient(180deg, rgba(251, 250, 247, .1), var(--paper) 780px),
+        var(--paper);
+    }
+
+    .hero {
+      min-height: 96svh;
+      position: relative;
+      color: white;
+      isolation: isolate;
+      display: grid;
+      align-items: start;
+      padding: 28px clamp(18px, 4vw, 64px) 42px;
+      background:
+        linear-gradient(180deg, rgba(8, 20, 38, .18), rgba(8, 20, 38, .08) 36%, rgba(10, 12, 12, .34) 100%),
+        linear-gradient(90deg, rgba(4, 16, 34, .14), rgba(4, 16, 34, .03) 42%, rgba(10, 12, 12, .14)),
+        url("assets/images/hero-fondo.jpeg") center/cover;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 130px;
+      z-index: -1;
+      background: linear-gradient(180deg, transparent, rgba(251, 250, 247, .94));
+    }
+
+    .nav {
+      position: fixed;
+      top: 18px;
+      left: clamp(14px, 4vw, 44px);
+      right: clamp(14px, 4vw, 44px);
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 10px 12px 10px 16px;
+      border: 1px solid rgba(255, 255, 255, .16);
+      background: rgba(10, 12, 12, .52);
+      backdrop-filter: blur(18px);
+      border-radius: 999px;
+      box-shadow: 0 12px 34px rgba(0, 0, 0, .18);
+    }
+
+    .brand-mini {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+      font-weight: 800;
+      letter-spacing: .02em;
+    }
+
+    .brand-dot {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      border-radius: 50%;
+      background: white;
+      color: var(--wine);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: clamp(10px, 2vw, 24px);
+      font-size: 14px;
+      font-weight: 700;
+      color: rgba(255, 255, 255, .86);
+    }
+
+    .nav-links a {
+      white-space: nowrap;
+    }
+
+    .nav-cta {
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: white;
+      color: var(--ink);
+      font-weight: 800;
+    }
+
+    .hero-content {
+      width: min(1180px, 100%);
+      margin: 0 auto;
+      min-height: calc(96svh - 70px);
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: clamp(92px, 13vh, 150px);
+    }
+
+    .logo-stage {
+      align-self: start;
+      justify-self: center;
+      width: min(72vw, 560px);
+      max-width: 560px;
+      padding: 0;
+      display: grid;
+      place-items: center;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+      border: 0;
+      overflow: hidden;
+    }
+
+    .logo-mark {
+      width: 100%;
+      height: auto;
+      border-radius: 0;
+      filter:
+        drop-shadow(0 0 22px rgba(255, 255, 255, .3))
+        drop-shadow(0 12px 28px rgba(9, 30, 53, .28));
+    }
+
+    .hero-copy {
+      max-width: 690px;
+      padding-bottom: 28px;
+    }
+
+    .eyebrow {
+      margin: 0 0 18px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba(255, 255, 255, .88);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 2px;
+      background: var(--gold);
+    }
+
+    h1 {
+      margin: 0;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(58px, 10vw, 132px);
+      line-height: .84;
+      letter-spacing: 0;
+      max-width: 780px;
+    }
+
+    .hero-copy p {
+      margin: 24px 0 0;
+      max-width: 600px;
+      color: rgba(255, 255, 255, .9);
+      font-size: clamp(17px, 2vw, 22px);
+      font-weight: 500;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 13px 20px;
+      border-radius: 999px;
+      font-weight: 800;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button.primary {
+      background: var(--wine);
+      color: white;
+      box-shadow: 0 14px 34px rgba(157, 23, 52, .34);
+    }
+
+    .button.secondary {
+      background: rgba(255, 255, 255, .14);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, .28);
+    }
+
+    .section {
+      padding: clamp(60px, 9vw, 118px) clamp(18px, 4vw, 64px);
+    }
+
+    .inner {
+      width: min(1180px, 100%);
+      margin: 0 auto;
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: minmax(0, .9fr) minmax(280px, 1.1fr);
+      gap: clamp(34px, 6vw, 86px);
+      align-items: center;
+    }
+
+    .section-label {
+      margin: 0 0 12px;
+      color: var(--wine);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 0;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(38px, 6vw, 72px);
+      line-height: .98;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      margin: 22px 0 0;
+      color: rgba(17, 17, 17, .74);
+      font-size: clamp(17px, 2vw, 20px);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .stat {
+      border-top: 1px solid var(--line);
+      padding-top: 16px;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1;
+      color: var(--charcoal);
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 8px;
+      color: rgba(17, 17, 17, .62);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .photo-stack {
+      position: relative;
+      min-height: 540px;
+    }
+
+    .photo-main,
+    .photo-small {
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      background: var(--cream);
+    }
+
+    .photo-main {
+      width: 78%;
+      height: 510px;
+      margin-left: auto;
+    }
+
+    .photo-main img,
+    .photo-small img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .photo-small {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 48%;
+      height: 255px;
+      border: 10px solid var(--paper);
+    }
+
+    .experiences {
+      background: #171919;
+      color: white;
+    }
+
+    .experiences .section-label {
+      color: var(--gold);
+    }
+
+    .experiences h2 {
+      max-width: 780px;
+    }
+
+    .experience-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 34px;
+    }
+
+    .experience-card {
+      min-height: 420px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      display: flex;
+      align-items: flex-end;
+      background: #262828;
+      box-shadow: 0 22px 58px rgba(0, 0, 0, .26);
+    }
+
+    .experience-card img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .5s ease;
+    }
+
+    .experience-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .experience-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 22%, rgba(0, 0, 0, .82));
+    }
+
+    .card-copy {
+      position: relative;
+      z-index: 1;
+      padding: 26px;
+    }
+
+    .card-copy span {
+      display: inline-block;
+      margin-bottom: 10px;
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .card-copy h3 {
+      margin: 0;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 36px;
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    .card-copy p {
+      margin: 12px 0 0;
+      color: rgba(255, 255, 255, .82);
+      font-weight: 500;
+    }
+
+    .escapada {
+      background:
+        linear-gradient(90deg, rgba(251, 250, 247, .98) 0 44%, rgba(251, 250, 247, .82) 58%, rgba(251, 250, 247, .12)),
+        url("https://images.unsplash.com/photo-1528823872057-9c018a7a7553?auto=format&fit=crop&w=2200&q=85") center/cover;
+    }
+
+    .trip-panel {
+      width: min(560px, 100%);
+      padding: clamp(26px, 5vw, 48px);
+      background: rgba(255, 255, 255, .78);
+      border: 1px solid rgba(17, 17, 17, .08);
+      border-radius: 8px;
+      box-shadow: 0 28px 80px rgba(17, 17, 17, .12);
+      backdrop-filter: blur(12px);
+    }
+
+    .trip-date {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 22px 0;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: var(--charcoal);
+      color: white;
+      font-weight: 900;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+
+    .trip-list {
+      display: grid;
+      gap: 12px;
+      margin: 26px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .trip-list li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+      color: rgba(17, 17, 17, .74);
+      font-weight: 600;
+    }
+
+    .trip-list li::before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      margin-top: 8px;
+      border-radius: 50%;
+      flex: 0 0 auto;
+      background: var(--wine);
+      box-shadow: 0 0 0 4px rgba(157, 23, 52, .12);
+    }
+
+    .media-header {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .media-header .lead {
+      max-width: 430px;
+      margin-top: 0;
+    }
+
+    .carousel-shell {
+      position: relative;
+      width: min(100%, 560px);
+      margin: 34px auto 0;
+    }
+
+    .carousel-viewport {
+      overflow: hidden;
+      border-radius: 8px;
+      background: #111;
+      box-shadow: var(--shadow);
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform .45s ease;
+      will-change: transform;
+    }
+
+    .carousel-slide {
+      position: relative;
+      min-width: 100%;
+      aspect-ratio: 9 / 16;
+      background: #111;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+    }
+
+    .carousel-slide::before {
+      content: "";
+      position: absolute;
+      inset: -4%;
+      background: center/cover no-repeat var(--slide-image, none);
+      filter: blur(28px) brightness(.5);
+      transform: scale(1.06);
+    }
+
+    .carousel-slide img,
+    .carousel-slide video {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background: transparent;
+    }
+
+    .carousel-slide::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 42%, rgba(0, 0, 0, .72));
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .carousel-caption {
+      position: absolute;
+      left: clamp(18px, 4vw, 34px);
+      right: clamp(18px, 4vw, 34px);
+      bottom: clamp(18px, 4vw, 34px);
+      z-index: 3;
+      max-width: 420px;
+      color: white;
+    }
+
+    .carousel-slide.video-slide .carousel-caption {
+      top: clamp(18px, 4vw, 30px);
+      bottom: auto;
+    }
+
+    .carousel-caption span {
+      display: inline-block;
+      margin-bottom: 8px;
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .carousel-caption strong {
+      display: block;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(28px, 4.6vw, 44px);
+      line-height: 1;
+    }
+
+    .carousel-caption p {
+      margin: 10px 0 0;
+      color: rgba(255, 255, 255, .84);
+      font-weight: 600;
+    }
+
+    .carousel-control {
+      position: absolute;
+      top: 50%;
+      z-index: 2;
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255, 255, 255, .42);
+      border-radius: 50%;
+      background: rgba(17, 17, 17, .42);
+      color: white;
+      cursor: pointer;
+      font-size: 30px;
+      line-height: 1;
+      backdrop-filter: blur(12px);
+      transform: translateY(-50%);
+    }
+
+    .carousel-control.prev {
+      left: 16px;
+    }
+
+    .carousel-control.next {
+      right: 16px;
+    }
+
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 18px;
+      padding-inline: 10px;
+    }
+
+    .carousel-dot {
+      width: 34px;
+      height: 4px;
+      border: 0;
+      border-radius: 999px;
+      background: rgba(17, 17, 17, .2);
+      cursor: pointer;
+    }
+
+    .carousel-dot.is-active {
+      background: var(--wine);
+    }
+
+    .contact {
+      color: white;
+      background: var(--charcoal);
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+      gap: clamp(26px, 5vw, 70px);
+      align-items: center;
+    }
+
+    .contact .section-label {
+      color: var(--gold);
+    }
+
+    .contact p {
+      color: rgba(255, 255, 255, .76);
+    }
+
+    .contact-card {
+      padding: 26px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, .07);
+      border: 1px solid rgba(255, 255, 255, .12);
+    }
+
+    .contact-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, .12);
+      color: rgba(255, 255, 255, .84);
+      font-weight: 800;
+    }
+
+    .contact-row:last-child {
+      border-bottom: 0;
+    }
+
+    .footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 26px clamp(18px, 4vw, 64px);
+      color: rgba(17, 17, 17, .62);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    @media (max-width: 900px) {
+      .nav-links a:not(.nav-cta) {
+        display: none;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 92px;
+      }
+
+      .hero-content,
+      .intro,
+      .contact-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .logo-stage {
+        justify-self: center;
+        width: min(84vw, 500px);
+        overflow: visible;
+      }
+
+      .experience-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .experience-card {
+        min-height: 330px;
+      }
+
+      .media-header {
+        grid-template-columns: 1fr;
+      }
+
+      .media-header {
+        display: grid;
+        align-items: start;
+      }
+
+      .media-header .lead {
+        margin-top: 12px;
+      }
+
+      .carousel-shell {
+        width: min(100%, 500px);
+      }
+    }
+
+    @media (max-width: 560px) {
+      .nav {
+        left: 10px;
+        right: 10px;
+      }
+
+      .brand-mini span {
+        max-width: 142px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .nav-cta {
+        padding: 10px 12px;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .photo-stack {
+        min-height: 410px;
+      }
+
+      .photo-main {
+        width: 88%;
+        height: 360px;
+      }
+
+      .photo-small {
+        width: 58%;
+        height: 190px;
+        border-width: 7px;
+      }
+
+      .carousel-control {
+        width: 40px;
+        height: 40px;
+        font-size: 26px;
+      }
+
+      .carousel-caption p {
+        display: none;
+      }
+
+      .footer {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="site-shell">
+    <nav class="nav" aria-label="Navegación principal">
+      <a class="brand-mini" href="#inicio" aria-label="Ir al inicio">
+        <span class="brand-dot">RS</span>
+        <span>Rutas y Sabores</span>
+      </a>
+      <div class="nav-links">
+        <a href="#experiencias">Experiencias</a>
+        <a href="#momentos">Momentos</a>
+        <a href="#escapada">Escapada</a>
+        <a href="#contacto" class="nav-cta">Reservar</a>
+      </div>
+    </nav>
+
+    <header class="hero" id="inicio">
+      <div class="hero-content">
+        <div class="logo-stage" aria-label="Logo de Rutas y Sabores">
+          <img class="logo-mark" src="rutas-y-sabores-logo-transparent.png" alt="Logo de Rutas y Sabores">
+        </div>
+
+      </div>
+    </header>
+
+    <main>
+      <section class="section" id="sobre">
+        <div class="inner intro">
+          <div>
+            <p class="section-label">Sobre la experiencia</p>
+            <h2>Un plan pensado para disfrutar Uruguay con todos los sentidos.</h2>
+            <p class="lead">Creamos salidas donde la ruta, la mesa y el paisaje se encuentran: bodegas, pueblos con encanto, sabores locales, charlas compartidas y momentos para volver con historias.</p>
+          </div>
+          <div class="photo-stack">
+            <figure class="photo-main">
+              <img src="assets/images/sobre-experiencia-01.jpeg" alt="Estanterias de cava con botellas en Pueblo Tannat">
+            </figure>
+            <figure class="photo-small">
+              <img src="assets/images/sobre-experiencia-02.jpeg" alt="Botellas sobre mesa de degustacion en Pueblo Tannat">
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section experiences" id="experiencias">
+        <div class="inner">
+          <p class="section-label">Qué ofrecemos</p>
+          <h2>Escapadas cuidadas, con ritmo tranquilo y detalles que se sienten.</h2>
+          <div class="experience-grid">
+            <article class="experience-card">
+              <img src="assets/images/ofrecemos-degustaciones.jpeg" alt="Persona disfrutando una degustación de vino">
+              <div class="card-copy">
+                <span>Sabores</span>
+                <h3>Degustaciones</h3>
+                <p>Bodegas, mesas locales y productos elegidos para conocer la zona desde el paladar.</p>
+              </div>
+            </article>
+            <article class="experience-card">
+              <img src="assets/images/ofrecemos-paisajes.jpeg" alt="Paisaje arbolado al atardecer durante la ruta">
+              <div class="card-copy">
+                <span>Rutas</span>
+                <h3>Paisajes</h3>
+                <p>Recorridos con paradas lindas, vistas memorables y tiempo real para disfrutar.</p>
+              </div>
+            </article>
+            <article class="experience-card">
+              <img src="assets/images/ofrecemos-encuentros.jpeg" alt="Grupo compartiendo un brindis durante la experiencia">
+              <div class="card-copy">
+                <span>Compañía</span>
+                <h3>Encuentros</h3>
+                <p>Viajes cálidos, cercanos y bien organizados para compartir sin preocuparse por nada.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section escapada" id="escapada">
+        <div class="inner">
+          <div class="trip-panel">
+            <p class="section-label">Próxima salida</p>
+            <h2>Carmelo: ruta del vino.</h2>
+            <div class="trip-date">4/07/26</div>
+            <p class="lead">Una escapada para caminar entre viñedos, descubrir paisajes únicos y cerrar el día con sabores que quedan en la memoria.</p>
+            <ul class="trip-list">
+              <li>Traslado coordinado y acompañamiento durante toda la experiencia.</li>
+              <li>Visita a bodega, degustación y tiempo para fotos.</li>
+              <li>Itinerario pensado para disfrutar sin apuro.</li>
+            </ul>
+            <div class="actions">
+              <a class="button primary" href="https://www.instagram.com/rutasysaboresuy/" target="_blank" rel="noreferrer">Consultar cupos</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="momentos">
+        <div class="inner">
+          <div class="media-header">
+            <div>
+              <p class="section-label">Momentos</p>
+              <h2>Una galeria vertical con fotos y videos de cada salida.</h2>
+            </div>
+            <p class="lead">La experiencia completa vive en un solo carrusel: fotos reales, clips verticales y escenas que muestran el ritmo de la visita.</p>
+          </div>
+
+          <div class="carousel-shell" data-carousel aria-label="Carrusel vertical de fotos y videos de Rutas y Sabores">
+            <button class="carousel-control prev" type="button" data-carousel-prev aria-label="Elemento anterior" title="Elemento anterior">‹</button>
+            <div class="carousel-viewport">
+              <div class="carousel-track" data-carousel-track>
+                <article class="carousel-slide" style="--slide-image: url('assets/images/pueblo-tannat-01-barricas.jpeg');">
+                  <img src="assets/images/pueblo-tannat-01-barricas.jpeg" alt="Visita guiada junto a barricas en Pueblo Tannat">
+                  <div class="carousel-caption">
+                    <span>Bodega</span>
+                    <strong>Recorrido entre barricas</strong>
+                    <p>Una escena real de visita guiada que muestra el costado humano de la experiencia.</p>
+                  </div>
+                </article>
+                <article class="carousel-slide" style="--slide-image: url('assets/images/pueblo-tannat-02-oliva.jpeg');">
+                  <img src="assets/images/pueblo-tannat-02-oliva.jpeg" alt="Cartel de aceite de oliva en el predio">
+                  <div class="carousel-caption">
+                    <span>Entorno</span>
+                    <strong>Sabores desde la llegada</strong>
+                    <p>El paseo combina paisaje, productos regionales y una identidad bien marcada desde la entrada.</p>
+                  </div>
+                </article>
+                <article class="carousel-slide" style="--slide-image: url('assets/images/pueblo-tannat-03-vinedo.jpeg');">
+                  <img src="assets/images/pueblo-tannat-03-vinedo.jpeg" alt="Salón de ladrillo y madera con vinos">
+                  <div class="carousel-caption">
+                    <span>Ambientación</span>
+                    <strong>Texturas con identidad</strong>
+                    <p>Ladrillo, madera y botellas para reforzar el costado patrimonial del recorrido.</p>
+                  </div>
+                </article>
+                <article class="carousel-slide" style="--slide-image: url('assets/images/pueblo-tannat-04-tienda.jpeg');">
+                  <img src="assets/images/pueblo-tannat-04-tienda.jpeg" alt="Viñedos y rosales en Pueblo Tannat">
+                  <div class="carousel-caption">
+                    <span>Viñedos</span>
+                    <strong>La ruta también se mira</strong>
+                    <p>Filas de vides, luz natural y rincones que ayudan a vender la experiencia completa.</p>
+                  </div>
+                </article>
+                <article class="carousel-slide" style="--slide-image: url('assets/images/pueblo-tannat-05-degustacion.jpeg');">
+                  <img src="assets/images/pueblo-tannat-05-degustacion.jpeg" alt="Mostrador con productos Narbona">
+                  <div class="carousel-caption">
+                    <span>Tienda</span>
+                    <strong>Detalles para llevarse</strong>
+                    <p>Productos, calidez y una puesta en escena que suma valor a la visita.</p>
+                  </div>
+                </article>
+                <article class="carousel-slide" style="--slide-image: url('assets/images/pueblo-tannat-06-mesa.jpeg');">
+                  <img src="assets/images/pueblo-tannat-06-mesa.jpeg" alt="Botellas listas para degustación">
+                  <div class="carousel-caption">
+                    <span>Degustación</span>
+                    <strong>La mesa preparada</strong>
+                    <p>Botellas, corchos y luz cálida para comunicar el momento central de la salida.</p>
+                  </div>
+                </article>
+                <article class="carousel-slide" style="--slide-image: url('assets/images/pueblo-tannat-07-salon.jpeg');">
+                  <img src="assets/images/pueblo-tannat-07-salon.jpeg" alt="Mesa montada frente a una cava">
+                  <div class="carousel-caption">
+                    <span>Experiencia</span>
+                    <strong>Un lugar para quedarse</strong>
+                    <p>La escena mezcla restaurante, cava y degustación en una sola imagen potente.</p>
+                  </div>
+                </article>
+                <article class="carousel-slide" style="--slide-image: url('assets/images/pueblo-tannat-08-cava.jpeg');">
+                  <img src="assets/images/pueblo-tannat-08-cava.jpeg" alt="Estanterías con botellas en cava">
+                  <div class="carousel-caption">
+                    <span>Cava</span>
+                    <strong>Escala y profundidad</strong>
+                    <p>Una foto que aporta volumen visual y muestra la amplitud de la colección.</p>
+                  </div>
+                </article>
+                <article class="carousel-slide" style="--slide-image: url('assets/images/pueblo-tannat-09-etiquetas.jpeg');">
+                  <img src="assets/images/pueblo-tannat-09-etiquetas.jpeg" alt="Línea de botellas sobre mesa de degustación">
+                  <div class="carousel-caption">
+                    <span>Etiqueta</span>
+                    <strong>El producto en primer plano</strong>
+                    <p>Cierra el carrusel con foco en las botellas y el lenguaje visual propio de la bodega.</p>
+                  </div>
+                </article>
+                <article class="carousel-slide video-slide">
+                  <video src="assets/videos/rutas-video-01.mp4" controls muted playsinline preload="metadata"></video>
+                  <div class="carousel-caption">
+                    <span>Video</span>
+                    <strong>La experiencia en movimiento</strong>
+                    <p>Un clip vertical para sumar ritmo real a la galeria.</p>
+                  </div>
+                </article>
+                <article class="carousel-slide video-slide">
+                  <video src="assets/videos/rutas-video-02.mp4" controls muted playsinline preload="metadata"></video>
+                  <div class="carousel-caption">
+                    <span>Video</span>
+                    <strong>Recorrido 01</strong>
+                    <p>Planos cortos y verticales integrados en el mismo flujo visual del carrusel.</p>
+                  </div>
+                </article>
+                <article class="carousel-slide video-slide">
+                  <video src="assets/videos/rutas-video-03.mp4" controls muted playsinline preload="metadata"></video>
+                  <div class="carousel-caption">
+                    <span>Video</span>
+                    <strong>Recorrido 02</strong>
+                    <p>Otra mirada de la salida para alternar entre imagen fija y movimiento.</p>
+                  </div>
+                </article>
+                <article class="carousel-slide video-slide">
+                  <video src="assets/videos/rutas-video-05.mp4" controls muted playsinline preload="metadata"></video>
+                  <div class="carousel-caption">
+                    <span>Video</span>
+                    <strong>Degustacion</strong>
+                    <p>Los clips ahora entran en la misma secuencia del relato visual.</p>
+                  </div>
+                </article>
+                <article class="carousel-slide video-slide">
+                  <video src="assets/videos/rutas-video-06.mp4" controls muted playsinline preload="metadata"></video>
+                  <div class="carousel-caption">
+                    <span>Video</span>
+                    <strong>Paisajes</strong>
+                    <p>Movimiento real para que el entorno no quede limitado a fotos estaticas.</p>
+                  </div>
+                </article>
+                <article class="carousel-slide video-slide">
+                  <video src="assets/videos/rutas-video-07.mp4" controls muted playsinline preload="metadata"></video>
+                  <div class="carousel-caption">
+                    <span>Video</span>
+                    <strong>Salida</strong>
+                    <p>Un clip mas dentro de la galeria vertical, sin separar formatos.</p>
+                  </div>
+                </article>
+                <article class="carousel-slide video-slide">
+                  <video src="assets/videos/rutas-video-08.mp4" controls muted playsinline preload="metadata"></video>
+                  <div class="carousel-caption">
+                    <span>Video</span>
+                    <strong>Momentos</strong>
+                    <p>El cierre en video acompana la experiencia completa dentro del mismo carrusel.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <button class="carousel-control next" type="button" data-carousel-next aria-label="Elemento siguiente" title="Elemento siguiente">›</button>
+            <div class="carousel-dots" data-carousel-dots aria-label="Seleccionar elemento"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact" id="contacto">
+        <div class="inner contact-layout">
+          <div>
+            <p class="section-label">Contacto</p>
+            <h2>Reservas, consultas y nuevas rutas.</h2>
+            <p class="lead">El perfil de Instagram puede ser el punto principal para recibir mensajes, mostrar próximas salidas y convertir seguidores en viajeros.</p>
+            <div class="actions">
+              <a class="button primary" href="https://www.instagram.com/rutasysaboresuy/" target="_blank" rel="noreferrer">Escribir por Instagram</a>
+              <a class="button secondary" href="mailto:hola@rutasysabores.uy">Enviar mail</a>
+            </div>
+          </div>
+          <aside class="contact-card" aria-label="Datos de Rutas y Sabores">
+            <div class="contact-row">
+              <span>Instagram</span>
+              <strong>@rutasysaboresuy</strong>
+            </div>
+            <div class="contact-row">
+              <span>Especialidad</span>
+              <strong>Escapadas</strong>
+            </div>
+            <div class="contact-row">
+              <span>Destino destacado</span>
+              <strong>Carmelo</strong>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Rutas y Sabores UY</span>
+      <span>Viajes con esencia, sabores auténticos y paisajes únicos.</span>
+    </footer>
+  </div>
+  <script>
+    const carousel = document.querySelector("[data-carousel]");
+
+    if (carousel) {
+      const track = carousel.querySelector("[data-carousel-track]");
+      const slides = Array.from(track.children);
+      const dotsWrap = carousel.querySelector("[data-carousel-dots]");
+      const prev = carousel.querySelector("[data-carousel-prev]");
+      const next = carousel.querySelector("[data-carousel-next]");
+      let activeIndex = 0;
+      let timer = null;
+
+      const dots = slides.map((slide, index) => {
+        const dot = document.createElement("button");
+        dot.className = "carousel-dot";
+        dot.type = "button";
+        const label = slide.querySelector("video") ? "Ver video" : "Ver foto";
+        dot.setAttribute("aria-label", `${label} ${index + 1}`);
+        dot.addEventListener("click", () => goTo(index));
+        dotsWrap.appendChild(dot);
+        return dot;
+      });
+
+      function stop() {
+        if (timer) {
+          window.clearInterval(timer);
+          window.clearTimeout(timer);
+          timer = null;
+        }
+      }
+
+      function syncActiveMedia() {
+        slides.forEach((slide, slideIndex) => {
+          const video = slide.querySelector("video");
+          if (!video) return;
+
+          if (slideIndex === activeIndex) return;
+
+          video.pause();
+          video.currentTime = 0;
+        });
+
+        const activeVideo = slides[activeIndex].querySelector("video");
+
+        if (!activeVideo) {
+          start();
+          return;
+        }
+
+        stop();
+        const playPromise = activeVideo.play();
+
+        if (playPromise && typeof playPromise.catch === "function") {
+          playPromise.catch(() => {
+            stop();
+            timer = window.setTimeout(() => goTo(activeIndex + 1), 7200);
+          });
+        }
+      }
+
+      function goTo(index) {
+        activeIndex = (index + slides.length) % slides.length;
+        track.style.transform = `translateX(-${activeIndex * 100}%)`;
+        dots.forEach((dot, dotIndex) => {
+          dot.classList.toggle("is-active", dotIndex === activeIndex);
+        });
+        syncActiveMedia();
+      }
+
+      function start() {
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+        if (slides[activeIndex].querySelector("video")) return;
+        stop();
+        timer = window.setInterval(() => goTo(activeIndex + 1), 5200);
+      }
+
+      slides.forEach((slide, index) => {
+        const video = slide.querySelector("video");
+        if (!video) return;
+
+        video.addEventListener("play", stop);
+        video.addEventListener("ended", () => {
+          if (index === activeIndex) goTo(activeIndex + 1);
+        });
+      });
+
+      prev.addEventListener("click", () => goTo(activeIndex - 1));
+      next.addEventListener("click", () => goTo(activeIndex + 1));
+      carousel.addEventListener("mouseenter", stop);
+      carousel.addEventListener("mouseleave", start);
+      goTo(0);
+      start();
+    }
+  </script>
+</body>
+</html>
