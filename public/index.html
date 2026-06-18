@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Rutas y Sabores | Viajes con esencia</title>
-  <meta name="description" content="Escapadas, paisajes únicos y sabores auténticos en Uruguay. Rutas y Sabores transforma cada excursión en recuerdos inolvidables.">
+  <meta name="description" content="Escapadas, paisajes Ãºnicos y sabores autÃ©nticos en Uruguay. Rutas y Sabores transforma cada excursiÃ³n en recuerdos inolvidables.">
   <link rel="preconnect" href="https://images.unsplash.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -67,7 +67,7 @@
       background:
         linear-gradient(180deg, rgba(8, 20, 38, .18), rgba(8, 20, 38, .08) 36%, rgba(10, 12, 12, .34) 100%),
         linear-gradient(90deg, rgba(4, 16, 34, .14), rgba(4, 16, 34, .03) 42%, rgba(10, 12, 12, .14)),
-        url("assets/images/hero-fondo.jpeg") center/cover;
+        url("https://rutasysabores.uy/assets/images/hero-fondo.jpeg") center/cover;
     }
 
     .hero::after {
@@ -704,6 +704,39 @@
       font-weight: 700;
     }
 
+
+
+    .whatsapp-float {
+      position: fixed;
+      right: clamp(16px, 3vw, 28px);
+      bottom: clamp(16px, 3vw, 28px);
+      z-index: 30;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 54px;
+      padding: 14px 18px;
+      border-radius: 999px;
+      background: #25d366;
+      color: #101510;
+      box-shadow: 0 18px 44px rgba(0, 0, 0, .28);
+      font-size: 15px;
+      font-weight: 900;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 22px 54px rgba(0, 0, 0, .34);
+    }
+
+    .whatsapp-float svg {
+      width: 22px;
+      height: 22px;
+      flex: 0 0 auto;
+    }
+
     @media (max-width: 900px) {
       .nav-links a:not(.nav-cta) {
         display: none;
@@ -801,12 +834,20 @@
       .footer {
         display: block;
       }
+
+      .whatsapp-float {
+        right: 14px;
+        bottom: 14px;
+        min-height: 50px;
+        padding: 13px 15px;
+      }
+
     }
   </style>
 </head>
 <body>
   <div class="site-shell">
-    <nav class="nav" aria-label="Navegación principal">
+    <nav class="nav" aria-label="NavegaciÃ³n principal">
       <a class="brand-mini" href="#inicio" aria-label="Ir al inicio">
         <span class="brand-dot">RS</span>
         <span>Rutas y Sabores</span>
@@ -822,7 +863,7 @@
     <header class="hero" id="inicio">
       <div class="hero-content">
         <div class="logo-stage" aria-label="Logo de Rutas y Sabores">
-          <img class="logo-mark" src="rutas-y-sabores-logo-transparent.png" alt="Logo de Rutas y Sabores">
+          <img class="logo-mark" src="https://rutasysabores.uy/rutas-y-sabores-logo-transparent.png" alt="Logo de Rutas y Sabores">
         </div>
 
       </div>
@@ -838,10 +879,10 @@
           </div>
           <div class="photo-stack">
             <figure class="photo-main">
-              <img src="assets/images/sobre-experiencia-01.jpeg" alt="Estanterias de cava con botellas en Pueblo Tannat">
+              <img src="https://rutasysabores.uy/assets/images/sobre-experiencia-01.jpeg" alt="Estanterias de cava con botellas en Pueblo Tannat">
             </figure>
             <figure class="photo-small">
-              <img src="assets/images/sobre-experiencia-02.jpeg" alt="Botellas sobre mesa de degustacion en Pueblo Tannat">
+              <img src="https://rutasysabores.uy/assets/images/sobre-experiencia-02.jpeg" alt="Botellas sobre mesa de degustacion en Pueblo Tannat">
             </figure>
           </div>
         </div>
@@ -849,11 +890,11 @@
 
       <section class="section experiences" id="experiencias">
         <div class="inner">
-          <p class="section-label">Qué ofrecemos</p>
+          <p class="section-label">QuÃ© ofrecemos</p>
           <h2>Escapadas cuidadas, con ritmo tranquilo y detalles que se sienten.</h2>
           <div class="experience-grid">
             <article class="experience-card">
-              <img src="assets/images/ofrecemos-degustaciones.jpeg" alt="Persona disfrutando una degustación de vino">
+              <img src="https://rutasysabores.uy/assets/images/ofrecemos-degustaciones.jpeg" alt="Persona disfrutando una degustaciÃ³n de vino">
               <div class="card-copy">
                 <span>Sabores</span>
                 <h3>Degustaciones</h3>
@@ -861,7 +902,7 @@
               </div>
             </article>
             <article class="experience-card">
-              <img src="assets/images/ofrecemos-paisajes.jpeg" alt="Paisaje arbolado al atardecer durante la ruta">
+              <img src="https://rutasysabores.uy/assets/images/ofrecemos-paisajes.jpeg" alt="Paisaje arbolado al atardecer durante la ruta">
               <div class="card-copy">
                 <span>Rutas</span>
                 <h3>Paisajes</h3>
@@ -869,11 +910,11 @@
               </div>
             </article>
             <article class="experience-card">
-              <img src="assets/images/ofrecemos-encuentros.jpeg" alt="Grupo compartiendo un brindis durante la experiencia">
+              <img src="https://rutasysabores.uy/assets/images/ofrecemos-encuentros.jpeg" alt="Grupo compartiendo un brindis durante la experiencia">
               <div class="card-copy">
-                <span>Compañía</span>
+                <span>CompaÃ±Ã­a</span>
                 <h3>Encuentros</h3>
-                <p>Viajes cálidos, cercanos y bien organizados para compartir sin preocuparse por nada.</p>
+                <p>Viajes cÃ¡lidos, cercanos y bien organizados para compartir sin preocuparse por nada.</p>
               </div>
             </article>
           </div>
@@ -883,13 +924,13 @@
       <section class="section escapada" id="escapada">
         <div class="inner">
           <div class="trip-panel">
-            <p class="section-label">Próxima salida</p>
+            <p class="section-label">PrÃ³xima salida</p>
             <h2>Carmelo: ruta del vino.</h2>
             <div class="trip-date">4/07/26</div>
-            <p class="lead">Una escapada para caminar entre viñedos, descubrir paisajes únicos y cerrar el día con sabores que quedan en la memoria.</p>
+            <p class="lead">Una escapada para caminar entre viÃ±edos, descubrir paisajes Ãºnicos y cerrar el dÃ­a con sabores que quedan en la memoria.</p>
             <ul class="trip-list">
-              <li>Traslado coordinado y acompañamiento durante toda la experiencia.</li>
-              <li>Visita a bodega, degustación y tiempo para fotos.</li>
+              <li>Traslado coordinado y acompaÃ±amiento durante toda la experiencia.</li>
+              <li>Visita a bodega, degustaciÃ³n y tiempo para fotos.</li>
               <li>Itinerario pensado para disfrutar sin apuro.</li>
             </ul>
             <div class="actions">
@@ -910,75 +951,75 @@
           </div>
 
           <div class="carousel-shell" data-carousel aria-label="Carrusel vertical de fotos y videos de Rutas y Sabores">
-            <button class="carousel-control prev" type="button" data-carousel-prev aria-label="Elemento anterior" title="Elemento anterior">‹</button>
+            <button class="carousel-control prev" type="button" data-carousel-prev aria-label="Elemento anterior" title="Elemento anterior">â€¹</button>
             <div class="carousel-viewport">
               <div class="carousel-track" data-carousel-track>
-                <article class="carousel-slide" style="--slide-image: url('assets/images/pueblo-tannat-01-barricas.jpeg');">
-                  <img src="assets/images/pueblo-tannat-01-barricas.jpeg" alt="Visita guiada junto a barricas en Pueblo Tannat">
+                <article class="carousel-slide" style="--slide-image: url('https://rutasysabores.uy/assets/images/pueblo-tannat-01-barricas.jpeg');">
+                  <img src="https://rutasysabores.uy/assets/images/pueblo-tannat-01-barricas.jpeg" alt="Visita guiada junto a barricas en Pueblo Tannat">
                   <div class="carousel-caption">
                     <span>Bodega</span>
                     <strong>Recorrido entre barricas</strong>
                     <p>Una escena real de visita guiada que muestra el costado humano de la experiencia.</p>
                   </div>
                 </article>
-                <article class="carousel-slide" style="--slide-image: url('assets/images/pueblo-tannat-02-oliva.jpeg');">
-                  <img src="assets/images/pueblo-tannat-02-oliva.jpeg" alt="Cartel de aceite de oliva en el predio">
+                <article class="carousel-slide" style="--slide-image: url('https://rutasysabores.uy/assets/images/pueblo-tannat-02-oliva.jpeg');">
+                  <img src="https://rutasysabores.uy/assets/images/pueblo-tannat-02-oliva.jpeg" alt="Cartel de aceite de oliva en el predio">
                   <div class="carousel-caption">
                     <span>Entorno</span>
                     <strong>Sabores desde la llegada</strong>
                     <p>El paseo combina paisaje, productos regionales y una identidad bien marcada desde la entrada.</p>
                   </div>
                 </article>
-                <article class="carousel-slide" style="--slide-image: url('assets/images/pueblo-tannat-03-vinedo.jpeg');">
-                  <img src="assets/images/pueblo-tannat-03-vinedo.jpeg" alt="Salón de ladrillo y madera con vinos">
+                <article class="carousel-slide" style="--slide-image: url('https://rutasysabores.uy/assets/images/pueblo-tannat-03-vinedo.jpeg');">
+                  <img src="https://rutasysabores.uy/assets/images/pueblo-tannat-03-vinedo.jpeg" alt="SalÃ³n de ladrillo y madera con vinos">
                   <div class="carousel-caption">
-                    <span>Ambientación</span>
+                    <span>AmbientaciÃ³n</span>
                     <strong>Texturas con identidad</strong>
                     <p>Ladrillo, madera y botellas para reforzar el costado patrimonial del recorrido.</p>
                   </div>
                 </article>
-                <article class="carousel-slide" style="--slide-image: url('assets/images/pueblo-tannat-04-tienda.jpeg');">
-                  <img src="assets/images/pueblo-tannat-04-tienda.jpeg" alt="Viñedos y rosales en Pueblo Tannat">
+                <article class="carousel-slide" style="--slide-image: url('https://rutasysabores.uy/assets/images/pueblo-tannat-04-tienda.jpeg');">
+                  <img src="https://rutasysabores.uy/assets/images/pueblo-tannat-04-tienda.jpeg" alt="ViÃ±edos y rosales en Pueblo Tannat">
                   <div class="carousel-caption">
-                    <span>Viñedos</span>
-                    <strong>La ruta también se mira</strong>
+                    <span>ViÃ±edos</span>
+                    <strong>La ruta tambiÃ©n se mira</strong>
                     <p>Filas de vides, luz natural y rincones que ayudan a vender la experiencia completa.</p>
                   </div>
                 </article>
-                <article class="carousel-slide" style="--slide-image: url('assets/images/pueblo-tannat-05-degustacion.jpeg');">
-                  <img src="assets/images/pueblo-tannat-05-degustacion.jpeg" alt="Mostrador con productos Narbona">
+                <article class="carousel-slide" style="--slide-image: url('https://rutasysabores.uy/assets/images/pueblo-tannat-05-degustacion.jpeg');">
+                  <img src="https://rutasysabores.uy/assets/images/pueblo-tannat-05-degustacion.jpeg" alt="Mostrador con productos Narbona">
                   <div class="carousel-caption">
                     <span>Tienda</span>
                     <strong>Detalles para llevarse</strong>
                     <p>Productos, calidez y una puesta en escena que suma valor a la visita.</p>
                   </div>
                 </article>
-                <article class="carousel-slide" style="--slide-image: url('assets/images/pueblo-tannat-06-mesa.jpeg');">
-                  <img src="assets/images/pueblo-tannat-06-mesa.jpeg" alt="Botellas listas para degustación">
+                <article class="carousel-slide" style="--slide-image: url('https://rutasysabores.uy/assets/images/pueblo-tannat-06-mesa.jpeg');">
+                  <img src="https://rutasysabores.uy/assets/images/pueblo-tannat-06-mesa.jpeg" alt="Botellas listas para degustaciÃ³n">
                   <div class="carousel-caption">
-                    <span>Degustación</span>
+                    <span>DegustaciÃ³n</span>
                     <strong>La mesa preparada</strong>
-                    <p>Botellas, corchos y luz cálida para comunicar el momento central de la salida.</p>
+                    <p>Botellas, corchos y luz cÃ¡lida para comunicar el momento central de la salida.</p>
                   </div>
                 </article>
-                <article class="carousel-slide" style="--slide-image: url('assets/images/pueblo-tannat-07-salon.jpeg');">
-                  <img src="assets/images/pueblo-tannat-07-salon.jpeg" alt="Mesa montada frente a una cava">
+                <article class="carousel-slide" style="--slide-image: url('https://rutasysabores.uy/assets/images/pueblo-tannat-07-salon.jpeg');">
+                  <img src="https://rutasysabores.uy/assets/images/pueblo-tannat-07-salon.jpeg" alt="Mesa montada frente a una cava">
                   <div class="carousel-caption">
                     <span>Experiencia</span>
                     <strong>Un lugar para quedarse</strong>
-                    <p>La escena mezcla restaurante, cava y degustación en una sola imagen potente.</p>
+                    <p>La escena mezcla restaurante, cava y degustaciÃ³n en una sola imagen potente.</p>
                   </div>
                 </article>
-                <article class="carousel-slide" style="--slide-image: url('assets/images/pueblo-tannat-08-cava.jpeg');">
-                  <img src="assets/images/pueblo-tannat-08-cava.jpeg" alt="Estanterías con botellas en cava">
+                <article class="carousel-slide" style="--slide-image: url('https://rutasysabores.uy/assets/images/pueblo-tannat-08-cava.jpeg');">
+                  <img src="https://rutasysabores.uy/assets/images/pueblo-tannat-08-cava.jpeg" alt="EstanterÃ­as con botellas en cava">
                   <div class="carousel-caption">
                     <span>Cava</span>
                     <strong>Escala y profundidad</strong>
-                    <p>Una foto que aporta volumen visual y muestra la amplitud de la colección.</p>
+                    <p>Una foto que aporta volumen visual y muestra la amplitud de la colecciÃ³n.</p>
                   </div>
                 </article>
-                <article class="carousel-slide" style="--slide-image: url('assets/images/pueblo-tannat-09-etiquetas.jpeg');">
-                  <img src="assets/images/pueblo-tannat-09-etiquetas.jpeg" alt="Línea de botellas sobre mesa de degustación">
+                <article class="carousel-slide" style="--slide-image: url('https://rutasysabores.uy/assets/images/pueblo-tannat-09-etiquetas.jpeg');">
+                  <img src="https://rutasysabores.uy/assets/images/pueblo-tannat-09-etiquetas.jpeg" alt="LÃ­nea de botellas sobre mesa de degustaciÃ³n">
                   <div class="carousel-caption">
                     <span>Etiqueta</span>
                     <strong>El producto en primer plano</strong>
@@ -986,7 +1027,7 @@
                   </div>
                 </article>
                 <article class="carousel-slide video-slide">
-                  <video src="assets/videos/rutas-video-01.mp4" controls muted playsinline preload="metadata"></video>
+                  <video src="https://rutasysabores.uy/assets/videos/rutas-video-01.mp4" controls muted playsinline preload="metadata"></video>
                   <div class="carousel-caption">
                     <span>Video</span>
                     <strong>La experiencia en movimiento</strong>
@@ -994,7 +1035,7 @@
                   </div>
                 </article>
                 <article class="carousel-slide video-slide">
-                  <video src="assets/videos/rutas-video-02.mp4" controls muted playsinline preload="metadata"></video>
+                  <video src="https://rutasysabores.uy/assets/videos/rutas-video-02.mp4" controls muted playsinline preload="metadata"></video>
                   <div class="carousel-caption">
                     <span>Video</span>
                     <strong>Recorrido 01</strong>
@@ -1002,7 +1043,7 @@
                   </div>
                 </article>
                 <article class="carousel-slide video-slide">
-                  <video src="assets/videos/rutas-video-03.mp4" controls muted playsinline preload="metadata"></video>
+                  <video src="https://rutasysabores.uy/assets/videos/rutas-video-03.mp4" controls muted playsinline preload="metadata"></video>
                   <div class="carousel-caption">
                     <span>Video</span>
                     <strong>Recorrido 02</strong>
@@ -1010,7 +1051,7 @@
                   </div>
                 </article>
                 <article class="carousel-slide video-slide">
-                  <video src="assets/videos/rutas-video-05.mp4" controls muted playsinline preload="metadata"></video>
+                  <video src="https://rutasysabores.uy/assets/videos/rutas-video-05.mp4" controls muted playsinline preload="metadata"></video>
                   <div class="carousel-caption">
                     <span>Video</span>
                     <strong>Degustacion</strong>
@@ -1018,7 +1059,7 @@
                   </div>
                 </article>
                 <article class="carousel-slide video-slide">
-                  <video src="assets/videos/rutas-video-06.mp4" controls muted playsinline preload="metadata"></video>
+                  <video src="https://rutasysabores.uy/assets/videos/rutas-video-06.mp4" controls muted playsinline preload="metadata"></video>
                   <div class="carousel-caption">
                     <span>Video</span>
                     <strong>Paisajes</strong>
@@ -1026,7 +1067,7 @@
                   </div>
                 </article>
                 <article class="carousel-slide video-slide">
-                  <video src="assets/videos/rutas-video-07.mp4" controls muted playsinline preload="metadata"></video>
+                  <video src="https://rutasysabores.uy/assets/videos/rutas-video-07.mp4" controls muted playsinline preload="metadata"></video>
                   <div class="carousel-caption">
                     <span>Video</span>
                     <strong>Salida</strong>
@@ -1034,7 +1075,7 @@
                   </div>
                 </article>
                 <article class="carousel-slide video-slide">
-                  <video src="assets/videos/rutas-video-08.mp4" controls muted playsinline preload="metadata"></video>
+                  <video src="https://rutasysabores.uy/assets/videos/rutas-video-08.mp4" controls muted playsinline preload="metadata"></video>
                   <div class="carousel-caption">
                     <span>Video</span>
                     <strong>Momentos</strong>
@@ -1043,7 +1084,7 @@
                 </article>
               </div>
             </div>
-            <button class="carousel-control next" type="button" data-carousel-next aria-label="Elemento siguiente" title="Elemento siguiente">›</button>
+            <button class="carousel-control next" type="button" data-carousel-next aria-label="Elemento siguiente" title="Elemento siguiente">â€º</button>
             <div class="carousel-dots" data-carousel-dots aria-label="Seleccionar elemento"></div>
           </div>
         </div>
@@ -1054,10 +1095,11 @@
           <div>
             <p class="section-label">Contacto</p>
             <h2>Reservas, consultas y nuevas rutas.</h2>
-            <p class="lead">El perfil de Instagram puede ser el punto principal para recibir mensajes, mostrar próximas salidas y convertir seguidores en viajeros.</p>
+            <p class="lead">El perfil de Instagram puede ser el punto principal para recibir mensajes, mostrar prÃ³ximas salidas y convertir seguidores en viajeros.</p>
             <div class="actions">
+              <a class="button primary" href="https://wa.me/59897604111?text=Hola%20Rutas%20y%20Sabores%2C%20quiero%20hacer%20una%20consulta." target="_blank" rel="noreferrer">Chatear por WhatsApp</a>
               <a class="button primary" href="https://www.instagram.com/rutasysaboresuy/" target="_blank" rel="noreferrer">Escribir por Instagram</a>
-              <a class="button secondary" href="mailto:hola@rutasysabores.uy">Enviar mail</a>
+              <a class="button secondary" href="https://mail.google.com/mail/?view=cm&fs=1&to=rutasysaboresuru@gmail.com&su=Consulta%20Rutas%20y%20Sabores&body=Hola%20Rutas%20y%20Sabores%2C%20quiero%20hacer%20una%20consulta." target="_blank" rel="noreferrer">Enviar mail</a>
             </div>
           </div>
           <aside class="contact-card" aria-label="Datos de Rutas y Sabores">
@@ -1080,9 +1122,16 @@
 
     <footer class="footer">
       <span>Rutas y Sabores UY</span>
-      <span>Viajes con esencia, sabores auténticos y paisajes únicos.</span>
+      <span>Viajes con esencia, sabores autÃ©nticos y paisajes Ãºnicos.</span>
     </footer>
   </div>
+  <a class="whatsapp-float" href="https://wa.me/59897604111?text=Hola%20Rutas%20y%20Sabores%2C%20quiero%20hacer%20una%20consulta." target="_blank" rel="noreferrer" aria-label="Chatear por WhatsApp con Rutas y Sabores">
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M20.2 11.8a8.1 8.1 0 0 1-12 7.1L4 20l1.1-4.1A8.1 8.1 0 1 1 20.2 11.8Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M9.1 8.2c.2-.5.4-.5.7-.5h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2.1.4 0 .6l-.4.5c-.1.2-.2.3-.1.5.3.7 1.2 1.6 2 2 .2.1.4.1.5-.1l.6-.7c.2-.2.4-.2.6-.1l1.6.8c.3.1.4.3.4.5 0 .5-.4 1.3-.9 1.5-.5.3-1.5.5-3.3-.3-2.5-1.1-4.2-3.5-4.4-5.1-.1-.7.1-1.3.4-1.6Z" fill="currentColor"/>
+    </svg>
+    WhatsApp
+  </a>
   <script>
     const carousel = document.querySelector("[data-carousel]");
 
