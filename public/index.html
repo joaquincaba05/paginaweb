@@ -435,6 +435,44 @@
       font-weight: 500;
     }
 
+    .july-experience {
+      margin-top: clamp(60px, 9vw, 108px);
+      padding-top: clamp(46px, 7vw, 82px);
+      border-top: 1px solid rgba(255, 255, 255, .12);
+    }
+
+    .july-experience h2 {
+      max-width: 900px;
+    }
+
+    .july-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 34px;
+    }
+
+    .july-card {
+      min-height: 360px;
+    }
+
+    .experience-card video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background: #111;
+    }
+
+    .july-card.video-card {
+      align-items: stretch;
+    }
+
+    .july-card.video-card::after {
+      display: none;
+    }
+
     .escapada {
       background:
         linear-gradient(90deg, rgba(251, 250, 247, .98) 0 44%, rgba(251, 250, 247, .82) 58%, rgba(251, 250, 247, .12)),
@@ -763,7 +801,15 @@
         grid-template-columns: 1fr;
       }
 
+      .july-grid {
+        grid-template-columns: 1fr;
+      }
+
       .experience-card {
+        min-height: 330px;
+      }
+
+      .july-card {
         min-height: 330px;
       }
 
@@ -917,6 +963,73 @@
                 <p>Viajes c&#225;lidos, cercanos y bien organizados para compartir sin preocuparse por nada.</p>
               </div>
             </article>
+          </div>
+
+          <div class="july-experience">
+            <p class="section-label">Experiencia real</p>
+            <h2>Esta fue la experiencia que vivimos el 4 de julio.</h2>
+
+            <div class="july-grid" aria-label="Fotos de la experiencia del 4 de julio">
+              <article class="experience-card july-card">
+                <img src="assets/images/experiencia-julio-07.jpeg" alt="Grupo disfrutando la experiencia al aire libre">
+                <div class="card-copy">
+                  <span>Grupo</span>
+                  <h3>La salida</h3>
+                </div>
+              </article>
+              <article class="experience-card july-card">
+                <img src="assets/images/experiencia-julio-06.jpeg" alt="Grupo junto al cartel de aceite de oliva">
+                <div class="card-copy">
+                  <span>Visita</span>
+                  <h3>Longo</h3>
+                </div>
+              </article>
+              <article class="experience-card july-card">
+                <img src="assets/images/experiencia-julio-08.jpeg" alt="Copas de vino en un brindis">
+                <div class="card-copy">
+                  <span>Brindis</span>
+                  <h3>Pueblo Tannat</h3>
+                </div>
+              </article>
+              <article class="experience-card july-card">
+                <img src="assets/images/experiencia-julio-01.jpeg" alt="Viajeras en el jardin durante la salida">
+                <div class="card-copy">
+                  <span>Momentos</span>
+                  <h3>Al aire libre</h3>
+                </div>
+              </article>
+              <article class="experience-card july-card">
+                <img src="assets/images/experiencia-julio-05.jpeg" alt="Degustacion de aceite de oliva">
+                <div class="card-copy">
+                  <span>Sabores</span>
+                  <h3>Aceite de oliva</h3>
+                </div>
+              </article>
+              <article class="experience-card july-card">
+                <img src="assets/images/experiencia-julio-09.jpeg" alt="Grupo en degustacion de aceite de oliva">
+                <div class="card-copy">
+                  <span>Encuentro</span>
+                  <h3>Degustacion</h3>
+                </div>
+              </article>
+              <article class="experience-card july-card">
+                <img src="assets/images/experiencia-julio-02.jpeg" alt="Actividad entre olivos">
+                <div class="card-copy">
+                  <span>Recorrido</span>
+                  <h3>Entre olivos</h3>
+                </div>
+              </article>
+              <article class="experience-card july-card">
+                <img src="assets/images/experiencia-julio-04.jpeg" alt="Mesa con panes y aceite de oliva">
+                <div class="card-copy">
+                  <span>Mesa</span>
+                  <h3>Sabores simples</h3>
+                </div>
+              </article>
+              <article class="experience-card july-card video-card">
+                <video src="assets/videos/experiencia-julio-video.mp4" controls muted playsinline preload="metadata"></video>
+              </article>
+            </div>
           </div>
         </div>
       </section>
