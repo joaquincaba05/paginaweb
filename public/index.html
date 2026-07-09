@@ -533,6 +533,76 @@
       box-shadow: 0 0 0 4px rgba(157, 23, 52, .12);
     }
 
+    .solas-section {
+      background:
+        linear-gradient(90deg, rgba(251, 250, 247, .98) 0 38%, rgba(251, 250, 247, .9) 52%, rgba(251, 250, 247, .38) 76%, rgba(251, 250, 247, .18)),
+        linear-gradient(180deg, rgba(251, 250, 247, .06), rgba(251, 250, 247, .78)),
+        url("assets/images/solas-y-solos-finca.jpeg") center/cover;
+    }
+
+    .solas-panel {
+      width: min(620px, 100%);
+      padding: clamp(26px, 5vw, 46px);
+      background: rgba(255, 255, 255, .9);
+      border: 1px solid rgba(17, 17, 17, .08);
+      border-radius: 8px;
+      box-shadow: 0 28px 80px rgba(17, 17, 17, .14);
+      backdrop-filter: blur(12px);
+    }
+
+    .solas-kicker {
+      margin: 0 0 10px;
+      color: var(--wine);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .solas-title {
+      margin: 0;
+      color: #3b1216;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(40px, 6vw, 70px);
+      line-height: .94;
+    }
+
+    .solas-age {
+      display: inline-flex;
+      margin-top: 18px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: #f3e4d4;
+      color: #561018;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+    }
+
+    .solas-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin: 24px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .solas-list li {
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+      color: rgba(17, 17, 17, .76);
+      font-weight: 800;
+    }
+
+    .solas-note {
+      margin: 24px 0 0;
+      color: rgba(17, 17, 17, .68);
+      font-size: 18px;
+      font-style: italic;
+      font-weight: 600;
+    }
+
     .media-header {
       display: flex;
       align-items: end;
@@ -805,6 +875,10 @@
         grid-template-columns: 1fr;
       }
 
+      .solas-list {
+        grid-template-columns: 1fr;
+      }
+
       .experience-card {
         min-height: 330px;
       }
@@ -1048,6 +1122,28 @@
             </ul>
             <div class="actions">
               <a class="button primary" href="https://www.instagram.com/rutasysaboresuy/" target="_blank" rel="noreferrer">Consultar cupos</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section solas-section" id="solas-y-solos">
+        <div class="inner">
+          <div class="solas-panel">
+            <p class="solas-kicker">Nueva experiencia</p>
+            <h2 class="solas-title">Solas y Solos</h2>
+            <span class="solas-age">+45 a&#241;os</span>
+            <ul class="solas-list">
+              <li>Grupo mixto +45 a&#241;os</li>
+              <li>Estancia Finca Piedra</li>
+              <li>Todo incluido</li>
+              <li>Fog&#243;n, baile y muchas risas</li>
+              <li>1 y 2 de agosto</li>
+              <li>2 d&#237;as / 1 noche</li>
+            </ul>
+            <p class="solas-note">Abr&#237; tu c&#237;rculo social y viv&#237; algo &#250;nico.</p>
+            <div class="actions">
+              <a class="button primary" href="https://www.instagram.com/rutasysaboresuy/" target="_blank" rel="noreferrer">Escribinos y reserv&#225; tu lugar</a>
             </div>
           </div>
         </div>
