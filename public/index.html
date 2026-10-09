@@ -575,6 +575,8 @@
     }
 
     .carousel-slide {
+      flex: 0 0 100%;
+      width: 100%;
       position: relative;
       min-width: 100%;
       aspect-ratio: 9 / 16;
@@ -583,6 +585,15 @@
       display: grid;
       place-items: center;
     }
+
+    #solos-y-solas .carousel-slide img {
+      object-fit: cover;
+    }
+
+    #solos-y-solas-horizontales .carousel-shell { width: min(100%, 1000px); }
+    #solos-y-solas-horizontales .carousel-slide { aspect-ratio: 4 / 3; }
+    #solos-y-solas-horizontales .carousel-slide img { object-fit: contain; }
+    #solos-y-solas-horizontales .carousel-slide::after { display: none; }
 
     .carousel-slide::before {
       content: "";
@@ -903,6 +914,18 @@
       }
 
     }
+    .upcoming-trip { background: var(--cream); text-align: center; }
+    .carmelo-poster { width: min(100%, 560px); margin: 32px auto 0; }
+    .carmelo-poster img { width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow); }
+    .carmelo-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 64px); align-items: center; margin-top: 36px; }
+    .carmelo-layout .carmelo-poster { width: 100%; margin: 0; }
+    .carmelo-details { text-align: left; font-size: clamp(16px, 1.6vw, 19px); line-height: 1.7; }
+    .carmelo-details .lead { margin-top: 0; }
+    .carmelo-details h3 { font-size: 22px; margin: 28px 0 16px; }
+    .carmelo-itinerary { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
+    .carmelo-price { color: var(--wine); font-size: clamp(20px, 2.2vw, 26px); margin-top: 28px; }
+    .carmelo-spots { font-weight: 700; }
+    @media (max-width: 760px) { .carmelo-layout { grid-template-columns: 1fr; } .carmelo-layout .carmelo-poster { max-width: 560px; margin-inline: auto; } }
   </style>
 </head>
 <body>
@@ -943,6 +966,30 @@
             <figure class="photo-small">
               <img src="assets/images/sobre-experiencia-02.jpeg" alt="Botellas sobre mesa de degustacion en Pueblo Tannat">
             </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section upcoming-trip" id="proxima-salida" aria-labelledby="carmelo-title">
+        <div class="inner">
+          <p class="section-label">Próxima salida</p>
+          <h2 id="carmelo-title">Ruta del vino en Carmelo</h2>
+          <div class="carmelo-layout">
+          <figure class="carmelo-poster">
+            <img src="assets/proximas-salidas/carmelo.jpeg" alt="Ruta del vino en Carmelo: última edición del año, 28 de noviembre de 2026. Brindis en Pueblo Tannat con Rutas y Sabores." width="1024" height="1536" loading="lazy">
+          </figure>
+            <div class="carmelo-details">
+              <p class="lead">Una experiencia para disfrutar de los mejores sabores de Carmelo, descubrir lugares únicos y compartir una jornada en buena compañía.</p>
+              <h3>✨ Nuestro itinerario:</h3>
+              <ul class="carmelo-itinerary">
+                <li>🫒 <strong>Almazara Longo:</strong> visita guiada y degustación de aceite de oliva.</li>
+                <li>🍷 <strong>Pueblo Tannat:</strong> degustación de vinos y almuerzo.</li>
+                <li>🏡 <strong>Narbona y Almacén de la Capilla:</strong> recorrido por dos rincones emblemáticos de Carmelo.</li>
+              </ul>
+              <p>🚌 <strong>Incluye:</strong> transporte ida y vuelta desde Montevideo, snack de bienvenida, visitas, degustaciones, almuerzo y acompañamiento de dos coordinadoras.</p>
+              <p class="carmelo-price">💰 <strong>Inversión: $7.500 por persona.</strong></p>
+              <p class="carmelo-spots">🥂 Cupos limitados.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -1042,28 +1089,6 @@
               <article class="experience-card july-card video-card">
                 <video src="assets/videos/experiencia-julio-video.mp4" controls muted playsinline preload="metadata"></video>
               </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section solas-section" id="solas-y-solos">
-        <div class="inner">
-          <div class="solas-panel">
-            <p class="solas-kicker">Nueva experiencia</p>
-            <h2 class="solas-title">Solas y Solos</h2>
-            <span class="solas-age">+50 a&#241;os</span>
-            <ul class="solas-list">
-              <li>Grupo mixto +50 a&#241;os</li>
-              <li>Estancia Finca Piedra</li>
-              <li>Todo incluido</li>
-              <li>Fog&#243;n, baile y muchas risas</li>
-              <li>26 y 27 de setiembre</li>
-              <li>2 d&#237;as / 1 noche</li>
-            </ul>
-            <p class="solas-note">Abr&#237; tu c&#237;rculo social y viv&#237; algo &#250;nico.</p>
-            <div class="actions">
-              <a class="button primary" href="https://www.instagram.com/rutasysaboresuy/" target="_blank" rel="noreferrer">Escribinos y reserv&#225; tu lugar</a>
             </div>
           </div>
         </div>
@@ -1219,6 +1244,99 @@
         </div>
       </section>
 
+      <section class="section" id="solos-y-solas">
+        <div class="inner">
+          <div class="media-header">
+            <div>
+              <p class="section-label">Solos y solas</p>
+              <h2>Solos y solas mucho más que una escapada, nuevos vínculos e historias para contar</h2>
+            </div>
+          </div>
+          <div class="carousel-shell" data-carousel aria-label="Fotos y videos de Solos y solas">
+            <button class="carousel-control prev" type="button" data-carousel-prev aria-label="Elemento anterior" title="Elemento anterior">&#8249;</button>
+            <div class="carousel-viewport">
+              <div class="carousel-track" data-carousel-track>
+                <article class="carousel-slide" style="--slide-image: url('assets/solos-y-solas/foto-01.jpeg');">
+                  <img src="assets/solos-y-solas/foto-01.jpeg" alt="Paseo en tractor entre campos de flores" loading="lazy">
+                </article>
+                <article class="carousel-slide" style="--slide-image: url('assets/solos-y-solas/foto-02.jpeg');">
+                  <img src="assets/solos-y-solas/foto-02.jpeg" alt="Copa de vino frente al paisaje" loading="lazy">
+                </article>
+                <article class="carousel-slide" style="--slide-image: url('assets/solos-y-solas/foto-03.jpeg');">
+                  <img src="assets/solos-y-solas/foto-03.jpeg" alt="Caballos en la estancia" loading="lazy">
+                </article>
+                <article class="carousel-slide" style="--slide-image: url('assets/solos-y-solas/foto-04.jpeg');">
+                  <img src="assets/solos-y-solas/foto-04.jpeg" alt="Fogón al aire libre" loading="lazy">
+                </article>
+                <article class="carousel-slide" style="--slide-image: url('assets/solos-y-solas/foto-05.jpeg');">
+                  <img src="assets/solos-y-solas/foto-05.jpeg" alt="Cabalgata en la estancia" loading="lazy">
+                </article>
+                <article class="carousel-slide" style="--slide-image: url('assets/solos-y-solas/foto-06.jpeg');">
+                  <img src="assets/solos-y-solas/foto-06.jpeg" alt="Juego de cartas compartido" loading="lazy">
+                </article>
+<article class="carousel-slide" style="--slide-image: url('assets/solos-y-solas/foto-09.jpeg');">
+                  <img src="assets/solos-y-solas/foto-09.jpeg" alt="Encuentro al aire libre" loading="lazy">
+                </article>
+                <article class="carousel-slide" style="--slide-image: url('assets/solos-y-solas/foto-10.jpeg');">
+                  <img src="assets/solos-y-solas/foto-10.jpeg" alt="Risas compartidas en la estancia" loading="lazy">
+                </article>
+                <article class="carousel-slide" style="--slide-image: url('assets/solos-y-solas/foto-11.jpeg');">
+                  <img src="assets/solos-y-solas/foto-11.jpeg" alt="Degustación de vinos en grupo" loading="lazy">
+                </article>
+                <article class="carousel-slide" style="--slide-image: url('assets/solos-y-solas/foto-12.jpeg');">
+                  <img src="assets/solos-y-solas/foto-12.jpeg" alt="Almuerzo compartido en la estancia" loading="lazy">
+                </article>
+<article class="carousel-slide" style="--slide-image: url('assets/solos-y-solas/foto-15.jpeg');">
+                  <img src="assets/solos-y-solas/foto-15.jpeg" alt="Partida de bochas al aire libre" loading="lazy">
+                </article>
+                <article class="carousel-slide video-slide">
+                  <video src="assets/solos-y-solas/video-01.mp4?audio=off" controls muted playsinline preload="metadata" aria-label="Video 1 de la experiencia Solos y solas"></video>
+                </article>
+                <article class="carousel-slide video-slide">
+                  <video src="assets/solos-y-solas/video-02.mp4?audio=off" controls muted playsinline preload="metadata" aria-label="Video 2 de la experiencia Solos y solas"></video>
+                </article>
+                <article class="carousel-slide video-slide">
+                  <video src="assets/solos-y-solas/video-03.mp4?audio=off" controls muted playsinline preload="metadata" aria-label="Video 3 de la experiencia Solos y solas"></video>
+                </article>
+<article class="carousel-slide video-slide">
+                  <video src="assets/solos-y-solas/video-05.mp4?audio=off" controls muted playsinline preload="metadata" aria-label="Video 5 de la experiencia Solos y solas"></video>
+                </article>
+              </div>
+            </div>
+            <button class="carousel-control next" type="button" data-carousel-next aria-label="Elemento siguiente" title="Elemento siguiente">&#8250;</button>
+            <div class="carousel-dots" data-carousel-dots aria-label="Seleccionar elemento"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="solos-y-solas-horizontales">
+        <div class="inner">
+          <p class="section-label">Solos y solas</p>
+          <h2>Momentos compartidos</h2>
+          <div class="carousel-shell horizontal-gallery" data-carousel aria-label="Fotos horizontales de Solos y solas">
+            <button class="carousel-control prev" type="button" data-carousel-prev aria-label="Elemento anterior">&#8249;</button>
+            <div class="carousel-viewport">
+              <div class="carousel-track" data-carousel-track>
+<article class="carousel-slide" style="--slide-image: url('assets/solos-y-solas/foto-14.jpeg');">
+                  <img src="assets/solos-y-solas/foto-14.jpeg" alt="Foto grupal de Solos y solas" loading="lazy">
+                </article>
+<article class="carousel-slide" style="--slide-image: url('assets/solos-y-solas/foto-13.jpeg');">
+                  <img src="assets/solos-y-solas/foto-13.jpeg" alt="Grupo durante el paseo por el campo" loading="lazy">
+                </article>
+<article class="carousel-slide" style="--slide-image: url('assets/solos-y-solas/foto-08.jpeg');">
+                  <img src="assets/solos-y-solas/foto-08.jpeg" alt="Paseo en grupo en el remolque" loading="lazy">
+                </article>
+<article class="carousel-slide" style="--slide-image: url('assets/solos-y-solas/foto-07.jpeg');">
+                  <img src="assets/solos-y-solas/foto-07.jpeg" alt="Grupo disfrutando del campo" loading="lazy">
+                </article>
+              </div>
+            </div>
+            <button class="carousel-control next" type="button" data-carousel-next aria-label="Elemento siguiente">&#8250;</button>
+            <div class="carousel-dots" data-carousel-dots aria-label="Seleccionar foto"></div>
+          </div>
+        </div>
+      </section>
+
       <section class="section contact" id="contacto">
         <div class="inner contact-layout">
           <div>
@@ -1262,9 +1380,7 @@
     WhatsApp
   </a>
   <script>
-    const carousel = document.querySelector("[data-carousel]");
-
-    if (carousel) {
+    document.querySelectorAll("[data-carousel]").forEach((carousel) => {
       const track = carousel.querySelector("[data-carousel-track]");
       const slides = Array.from(track.children);
       const dotsWrap = carousel.querySelector("[data-carousel-dots]");
@@ -1349,11 +1465,13 @@
 
       prev.addEventListener("click", () => goTo(activeIndex - 1));
       next.addEventListener("click", () => goTo(activeIndex + 1));
-      carousel.addEventListener("mouseenter", stop);
-      carousel.addEventListener("mouseleave", start);
+      if (!carousel.closest("section").id.startsWith("solos-y-solas")) {
+        carousel.addEventListener("mouseenter", stop);
+        carousel.addEventListener("mouseleave", start);
+      }
       goTo(0);
       start();
-    }
+    });
   </script>
 </body>
 </html>
